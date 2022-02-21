@@ -1,0 +1,46 @@
+package com.basicprogram.practice;
+
+//🟢 🟢 WAP which will return the total count of prime no between a given range.
+
+public class AllinzeHachathone2 {
+
+	private static int  findPrime(int n) 
+	{
+		int count=1;
+		for (int i = 1; i < n; i++) 
+		{
+			int temp=0;
+			for (int j = 2; j <= i-1; j++)
+			{
+				if(i%j==0)
+				{
+					temp++;
+				}
+			}
+			
+			if(temp==0)
+			{
+				count++;
+				//System.out.println(i); // Uncomment this line if you want to print the prime no between a given range.
+			}
+			else
+			{
+				continue;
+			}
+		}
+		return count;
+	}
+
+	// Main method
+	public static void main(String[] args) {
+		int n = 16;			
+
+		int count=findPrime(n);
+		System.out.println(count);
+	}
+
+}
+
+//🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢 OUTPUT 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢
+//  16
+// Output = 8         As the prime nos. between 1 and 16 is: 1  ,2  ,3  ,  5,  7,  11,  13,  17,  19
